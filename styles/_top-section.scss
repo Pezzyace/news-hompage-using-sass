@@ -1,0 +1,116 @@
+@import 'colors';
+@import 'media-quires';
+
+.top-section{
+  display: flex;
+  gap: 50px;
+  margin-bottom: 30px;
+
+  @include mobile{
+    flex-direction: column;
+  }
+
+  .left{
+    width: 90%;
+
+    @include mobile{
+      width: 100%;
+    }
+  
+
+    img{
+      width: 100%;
+      object-fit: cover;
+      margin-bottom: 10px;
+
+      @include mobile{
+        display: none;
+      }
+    }
+    .mobile{
+      display: none;
+
+      @include mobile{
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        margin-bottom: 25px;
+      }
+    }
+    div{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+
+      @include mobile{
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        width: 90%;
+      }
+    }
+    h3{
+      font-size: 35px;
+      width: 70%;
+      font-weight: 700%;
+      line-height: 2.5rem;
+
+      @include mobile{
+        margin-bottom: -20px;
+      }
+    }
+    article{
+      p{
+        margin-bottom: 30px;
+        color: $dgb;
+
+        @include mobile{
+          font-size: 15px;
+          line-height: 1.5;
+        }
+      }
+      .readmore-btn{
+        background-color: $softR;
+        color: $w;
+        padding: 10px 20px;
+        border: none;
+        font-size: 12px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      input:hover{
+        background-color: $vdgb;
+      }
+    }
+  }
+  .right{
+    background-color: $vdgb;
+    padding: 20px;
+
+    h1{
+      font-size: 25px;
+      margin-bottom: 15px;
+      color: $softO;
+    }
+    section{
+      border-bottom: 1px solid $gB;
+      margin-bottom: 15px;
+
+      h3{
+        color: $w;
+        margin-bottom: 10px;
+        cursor: pointer;
+        transition: color 0.3s;
+      }
+      h3:hover{
+        color: $softO;
+      }
+      p{
+        color: $gB;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

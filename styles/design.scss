@@ -1,0 +1,23 @@
+@import 'colors';
+@import 'nav';
+@import 'top-section';
+@import 'bottom-section';
+
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+main{
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+
+  @include mobile{
+    width: 100%;
+  }
+
+}

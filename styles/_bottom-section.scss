@@ -1,0 +1,44 @@
+@import 'colors';
+@import 'media-quires';
+
+.bottom-section{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 20px;
+
+  @include mobile{
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  article{
+    display: flex;
+    gap: 15px;
+
+    img{
+      width: 30%;
+      object-fit: contain;
+    }
+    h1{
+      color: $gB;
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+    h3{
+      margin-bottom: 5px;
+      color: $vdgb;
+      font-weight: 700px;
+      cursor: pointer;
+      transition: color 0.5s;
+    }
+    h3:hover{
+      color: $softR;
+    }
+    p{
+      color: $dgb;
+    }
+  }
+}
